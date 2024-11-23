@@ -47,8 +47,10 @@ def demo(opt, meta):
 
             filename = os.path.splitext(os.path.basename(opt.demo))[0] + '_' + str(idx).zfill(
                 4) + '.png'
+            #print(filename) 这里的filename就是 webcam_000, web_cam111
             ret = detector.run(img, meta_inp=meta,
                                filename=filename)
+            print("ret result is",ret['results'])
             idx = idx + 1
 
             time_str = ''

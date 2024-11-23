@@ -74,7 +74,7 @@ For category-level 6-DoF object estimation on images/video/image folders, run:
 
 ```
 cd $CenterPose_ROOT/src
-python demo.py --demo /path/to/image/or/folder/or/video --arch dlav1_34 --load_model ../path/to/model
+python demo.py --demo /home/tianyi/pose_estimation/src/CenterPose/images/CenterPose/cup --arch dlav1_34 --load_model /home/tianyi/pose_estimation/src/CenterPose/models/cup_mug_v1_140.pth
 ```
 
 Similarly, for category-level 6-DoF object tracking, run:
@@ -88,7 +88,9 @@ You can also enable `--debug 2` to display more intermediate outputs or `--debug
 For the webcam demo (You may want to specify the camera intrinsics via --cam_intrinsic), run:
 ```
 cd $CenterPose_ROOT/src
-python demo.py --demo webcam --arch dlav1_34 --load_model ../path/to/model
+python demo.py --demo webcam --arch dlav1_34 --load_model /home/tianyi/pose_estimation/src/CenterPose/models/cup_mug_v1_140.pth
+
+python realsense.py --demo webcam --arch dlav1_34 --load_model /home/tianyi/pose_estimation/src/CenterPose/models/cup_mug_v1_140.pth
 ```
 
 Similarly, for tracking, run:
@@ -117,28 +119,27 @@ cd $path/to/folder
 tensorboard --logdir=logs --host=XX.XX.XX.XX
 ```
 
-## Evaluation
-
-We evaluate our method on the [Objectron](https://github.com/google-research-datasets/Objectron) dataset, please refer to the [objectron_eval directory](src/tools/objectron_eval/README.md) for more details.
-
-## Citation
-Please cite the following if you use this repository in your publications:
-
-```
-@inproceedings{lin2022icra:centerpose,
-  title={Single-Stage Keypoint-based Category-level Object Pose Estimation from an {RGB} Image},
-  author={Lin, Yunzhi and Tremblay, Jonathan and Tyree, Stephen and Vela, Patricio A. and Birchfield, Stan},
-  booktitle={IEEE International Conference on Robotics and Automation (ICRA)},
-  year={2022}
-}
-
-@inproceedings{lin2022icra:centerposetrack,
-  title={Keypoint-Based Category-Level Object Pose Tracking from an {RGB} Sequence with Uncertainty Estimation},
-  author={Lin, Yunzhi and Tremblay, Jonathan and Tyree, Stephen and Vela, Patricio A. and Birchfield, Stan},
-  booktitle={IEEE International Conference on Robotics and Automation (ICRA)},
-  year={2022}
-}
-```
-
-## Licence
-CenterPose is licensed under the [NVIDIA Source Code License - Non-commercial](LICENSE.md).
+/// 我的realsense的内参
+---
+header: 
+  seq: 39
+  stamp: 
+    secs: 1732242774
+    nsecs: 566140652
+  frame_id: "camera_color_optical_frame"
+height: 480
+width: 640
+distortion_model: "plumb_bob"
+D: [0.0, 0.0, 0.0, 0.0, 0.0]
+K: [615.0198364257812, 0.0, 317.4881591796875, 0.0, 615.1835327148438, 244.118896484375, 0.0, 0.0, 1.0]
+R: [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0]
+P: [615.0198364257812, 0.0, 317.4881591796875, 0.0, 0.0, 615.1835327148438, 244.118896484375, 0.0, 0.0, 0.0, 1.0, 0.0]
+binning_x: 0
+binning_y: 0
+roi: 
+  x_offset: 0
+  y_offset: 0
+  height: 0
+  width: 0
+  do_rectify: False
+---
