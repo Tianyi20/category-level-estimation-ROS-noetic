@@ -90,8 +90,8 @@ if __name__ == '__main__':
     opt.obj_scale = True
     opt.arch = "dlav1_34"
     opt.demo = "webcam"
-    opt.load_model = "/home/tianyi/pose_estimation/src/CenterPose/models/cup_mug_v1_140.pth"
-    #opt.load_model = "/home/tianyi/pose_estimation/src/CenterPose/models/bottle_v1_sym_12_140.pth"
+    #opt.load_model = "/home/tianyi/pose_estimation/src/CenterPose/models/cup_mug_v1_140.pth"
+    opt.load_model = "/home/tianyi/pose_estimation/src/CenterPose/models/bottle_v1_sym_12_140.pth"
     #opt.load_model = "/home/tianyi/pose_estimation/src/CenterPose/models/cereal_box_v1_140.pth"
 
     # PnP related

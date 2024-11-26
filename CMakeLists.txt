@@ -170,6 +170,8 @@ include_directories(
 catkin_install_python(PROGRAMS
   src/ros_realsense.py
   src/pose_publish.py
+  src/generate_object.py
+
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

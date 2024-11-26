@@ -16,7 +16,7 @@ def publish_object_shape():
     while not rospy.is_shutdown():
         # 创建Marker消息
         marker = Marker()
-        marker.header.frame_id = "base_link"  # 在此设置合适的坐标系
+        marker.header.frame_id = "camera_color_optical_frame"  # 在此设置合适的坐标系
         marker.header.stamp = rospy.get_rostime()
         marker.ns = "object"
         marker.id = 0
