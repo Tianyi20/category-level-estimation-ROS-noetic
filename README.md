@@ -16,6 +16,21 @@ Two efforts are made:
 
 The pose and dimension will be published as ROS geometry std message StampedPose and Vector3.
 
+These topics are going to be published:
+```
+
+self.cup_pose_pub = rospy.Publisher('/pose_cup', PoseStamped, queue_size=1)
+self.bottle_pose_pub = rospy.Publisher('/pose_bottle', PoseStamped, queue_size=1)
+
+# object dimension publisher, using Vector3
+self.cup_dimension_pub = rospy.Publisher('/dimension_cup',Vector3, queue_size=1)
+self.bottle_dimension_pub = rospy.Publisher('/dimension_bottle',Vector3, queue_size=1)
+
+# marker publisher
+self.obj_scale_marker_pub = rospy.Publisher('/obj_scale_marker', Marker, queue_size=1)
+
+```
+
 However, the original work has no reasoning capability, so each detector in this work also publish the first object's pose and dimension in the result array, although multiple objects are detected and store in the result array. 
 
 The original camera coordinate convention used in the dataset is  camera frame: +x bottom, +y right, +z back. So i do the pose position x, y, z to match the realsense camera frame. However, noting i didn't do the orientation coordinate transformation, because i only need pose.position.
