@@ -26,6 +26,10 @@ real_factor = object_scale_height_given / object_height_measured
 result_metrix  =  result_given * real_factor. 
 
 
+
+
+## how to use:
+
 ```
 roslaunch realsense_camera rs_camera.launch
 rosrun CenterPose pose_publish.py
@@ -90,6 +94,23 @@ For hardware-accelerated ROS2 inference support, please visit [Isaac ROS CenterP
     cd $CenterPose_ROOT/src/lib/models/networks/DCNv2
     ./make.sh
     ~~~
+
+### How to use higher version of pytorch incoporating with DCN:
+
+I just solved the question by using correct cuda, with corresponding torch, however, the torch has higher version. So i change the DCNv2 to be the latest: https://github.com/lucasjinreal/DCNv2_latest. By
+
+``` 
+git clone https://github.com/lucasjinreal/DCNv2_latest.git
+```
+Then **substitue it with the original DCNv2 folder**. Note here here we go into the folder, and use `$ python3 setup.py build develop` instead of original `./make.sh ` .
+
+```
+python3 setup.py build develop
+```
+
+After that, i should be fine. You can directly to run demo.py.
+
+
 
 4. Download our [CenterPose pre-trained models](https://drive.google.com/drive/folders/16HbCnUlCaPcTg4opHP_wQNPsWouUlVZe?usp=sharing) and move all the `.pth` files to `$CenterPose_ROOT/models/CenterPose/`.  Similarly, download our [CenterPoseTrack pre-trained models](https://drive.google.com/drive/folders/1zOryfHI7ab2Qsyg3rs-zP3ViblknfzGy?usp=sharing) and move all the `.pth` files to `$CenterPose_ROOT/models/CenterPoseTrack/`. We currently provide models for 9 categories: bike, book, bottle, camera, cereal_box, chair, cup, laptop, and shoe. 
 
