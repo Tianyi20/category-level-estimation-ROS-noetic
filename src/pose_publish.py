@@ -42,8 +42,8 @@ class MultiModelROSNode:
         self.obj_scale_marker_pub = rospy.Publisher('/obj_scale_marker', Marker, queue_size=1)
 
         # mug和bottle的实际的高度，来scale
-        self.bottle_real_height = 0.23 #m
-        self.cup_real_height = 0.085 #m
+        self.bottle_real_height = 0.175 #m
+        self.cup_real_height = 0.105 #m
 
     def init_detectors(self):
         # 初始化第一个模型
