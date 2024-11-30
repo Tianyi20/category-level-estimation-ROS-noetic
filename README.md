@@ -1,4 +1,37 @@
-# CenterPose
+# ROS noetics platform with multiple-detectors 
+
+![](readme/main.png)
+
+![](readme/cups.png)
+
+
+This repository is the noetic platform implementation of work: [Single-Stage Keypoint-based Category-level Object Pose Estimation from an RGB Image](https://arxiv.org/abs/2109.06161) by Lin et al., ICRA 2022 (full citation below).
+
+Two efforts are made:
+
+- ROS Noetic platform implementation
+- Multiple detectors enabled simultanesouly. 
+
+The pose and dimension will be published as ROS geometry std message StampedPose and Vector3.
+
+However, the original work has no reasoning capability, so each detector in this work also publish the first object's pose and dimension in the result array, although multiple objects are detected and store in the result array. 
+
+The original camera coordinate convention used in the dataset is  camera frame: +x bottom, +y right, +z back. So i do the pose position x, y, z to match the realsense camera frame. However, noting i didn't do the orientation coordinate transformation, because i only need pose.position.
+
+The most important thing is: The predicted position ( x, y, z) is actually only up to a scale, as we do estimation from a single RGB image. It is not a metric-based result. There should be more effort to generate a real world factor.
+
+For the easier use, I simply measure the real world factor using this: 
+
+real_factor = object_scale_height_given / object_height_measured
+result_metrix  =  result_given * real_factor. 
+
+
+```
+roslaunch realsense_camera rs_camera.launch
+rosrun CenterPose pose_publish.py
+```
+
+# CenterPoseBelow is the original CenterPose work: 
 
 ![](readme/fig1.png)
 
