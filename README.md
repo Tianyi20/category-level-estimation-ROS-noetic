@@ -33,7 +33,7 @@ self.obj_scale_marker_pub = rospy.Publisher('/obj_scale_marker', Marker, queue_s
 
 However, due to no reasoning capability, each detector in this work only publish the first object's pose and dimension in the result array, although multiple objects are detected and store in the result array. 
 
-The original camera coordinate convention used in the dataset is  camera frame: +x bottom, +y right, +z back. So i do the pose position x, y, z to match the realsense camera frame. However, noting i didn't do the orientation coordinate transformation, because i only need pose.position.
+The original camera coordinate convention used in the dataset is  camera frame: +x bottom, +y right, +z back. So i change them to match the realsense camera frame. However, noting i didn't do the orientation coordinate transformation, PoseStamped,pose.orientation will follow the original dataset coordinate.
 
 The most important thing is: The predicted position ( x, y, z) is actually only up to a scale, as we do estimation from a single RGB image. It is not a metric-based result. There should be more effort to generate a real world factor.
 
