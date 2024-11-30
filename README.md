@@ -1,4 +1,4 @@
-# ROS noetics platform with multiple-detectors 
+# ROS noetics platform -- category-level object estimation with multiple-detectors 
 
 ![](readme/main.png)
 
@@ -6,6 +6,8 @@
 
 
 This repository is the noetic platform implementation of work: [Single-Stage Keypoint-based Category-level Object Pose Estimation from an RGB Image](https://arxiv.org/abs/2109.06161) by Lin et al., ICRA 2022 (full citation below).
+
+The demonstration video is: [liquid manipulation with bottle and cup](https://www.youtube.com/watch?v=oPvfIooH5HU)
 
 Two efforts are made:
 
