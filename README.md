@@ -12,7 +12,8 @@ The demonstration video is: [liquid manipulation with bottle and cup](https://ww
 Two efforts are made:
 
 - ROS Noetic platform implementation
-- Multiple detectors enabled simultanesouly. 
+- Multiple detectors enabled simultanesouly.
+- A thresold score system 
 
 The pose and dimension will be published as ROS geometry std message StampedPose and Vector3.
 
