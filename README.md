@@ -20,7 +20,7 @@ Real-time online inference by realsense DB435
 
 The pose and dimension will be published as ROS geometry std message StampedPose and Vector3.
 
-These topics are going to be published:
+Topics published:
 ```
 
 self.cup_pose_pub = rospy.Publisher('/pose_cup', PoseStamped, queue_size=1)
