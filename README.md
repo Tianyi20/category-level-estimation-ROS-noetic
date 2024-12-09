@@ -4,7 +4,7 @@
 
 
 
-This repository is the noetic platform implementation of work: [Single-Stage Keypoint-based Category-level Object Pose Estimation from an RGB Image](https://arxiv.org/abs/2109.06161) by Lin et al., ICRA 2022 (full citation below).
+This repository is the noetic platform implementation based on: [Single-Stage Keypoint-based Category-level Object Pose Estimation from an RGB Image](https://arxiv.org/abs/2109.06161) by Lin et al., ICRA 2022 (full citation below).
 
 The demonstration video is: [liquid manipulation with bottle and cup](https://www.youtube.com/watch?v=oPvfIooH5HU)
 
@@ -18,7 +18,7 @@ Real-time online inference by realsense DB435
 ![image](https://github.com/user-attachments/assets/22bcbb51-a306-46b5-b626-10695892e5cd)
 
 
-The pose and dimension will be published as ROS geometry std message StampedPose and Vector3.
+The pose and dimension are published as ROS geometry std message StampedPose and Vector3.
 
 Topics published:
 ```
