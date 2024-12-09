@@ -8,7 +8,7 @@ This repository is the noetic platform implementation of work: [Single-Stage Key
 
 The demonstration video is: [liquid manipulation with bottle and cup](https://www.youtube.com/watch?v=oPvfIooH5HU)
 
-Two efforts are made:
+Three efforts are made based on original work:
 
 - ROS Noetic platform implementation
 - Multiple detectors enabled simultanesouly.
