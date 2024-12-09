@@ -14,7 +14,7 @@ Two efforts are made:
 - Multiple detectors enabled simultanesouly.
 - A thresold score system
 
-![](readme/cups.png)
+![image](https://github.com/user-attachments/assets/22bcbb51-a306-46b5-b626-10695892e5cd)
 
 
 The pose and dimension will be published as ROS geometry std message StampedPose and Vector3.
