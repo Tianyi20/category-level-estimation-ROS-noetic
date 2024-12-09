@@ -14,6 +14,7 @@ Three efforts are made based on original work:
 - Multiple detectors enabled simultanesouly.
 - A thresold score system
 
+Real-time online inference by realsense DB435
 ![image](https://github.com/user-attachments/assets/22bcbb51-a306-46b5-b626-10695892e5cd)
 
 
