@@ -1,8 +1,7 @@
 # ROS noetics platform -- category-level object estimation with multiple-detectors 
 
-![](readme/main.png)
+![image](https://github.com/user-attachments/assets/5df39b66-e0fb-43b6-9d05-cfbe250d1d31)
 
-![](readme/cups.png)
 
 
 This repository is the noetic platform implementation of work: [Single-Stage Keypoint-based Category-level Object Pose Estimation from an RGB Image](https://arxiv.org/abs/2109.06161) by Lin et al., ICRA 2022 (full citation below).
@@ -13,7 +12,10 @@ Two efforts are made:
 
 - ROS Noetic platform implementation
 - Multiple detectors enabled simultanesouly.
-- A thresold score system 
+- A thresold score system
+
+![](readme/cups.png)
+
 
 The pose and dimension will be published as ROS geometry std message StampedPose and Vector3.
 
